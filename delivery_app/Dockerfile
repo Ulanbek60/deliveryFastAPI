@@ -6,6 +6,6 @@ WORKDIR /delivery_app
 
 COPY req.txt /delivery_app/
 RUN pip install -r req.txt && \
-    pip install --upgrade pip \
+    pip install --upgrade pip
 
 COPY . /delivery_app/
