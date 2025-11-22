@@ -4,8 +4,10 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /delivery_app
 
-COPY req.txt /delivery_app/
-RUN pip install -r req.txt && \
-    pip install --upgrade pip
+COPY req.txt .
+RUN pip install --upgrade pip && \
+    pip install -r req.txt
 
-COPY . /delivery_app/
+COPY . .
+
+CMD ["uvicorn", "main:delivery", "--host", "0.0.0.0", "--port", "8001"]
