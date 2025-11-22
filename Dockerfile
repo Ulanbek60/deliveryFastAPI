@@ -8,6 +8,6 @@ COPY req.txt .
 RUN pip install --upgrade pip && \
     pip install -r req.txt
 
-COPY . .
+COPY delivery_app .
 
 CMD ["uvicorn", "main:delivery", "--host", "0.0.0.0", "--port", "8001"]
