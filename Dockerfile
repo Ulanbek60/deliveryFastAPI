@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /delivery_app
 
-COPY req.txt .
+COPY req.txt .x
 RUN pip install --upgrade pip && \
     pip install -r req.txt
 
